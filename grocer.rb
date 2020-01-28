@@ -32,15 +32,14 @@ def consolidate_cart(cart)
     #  all_items[index] = cart[index]
     #end
 
-    item_name = cart[index][:item]
-    sought_item = find_item_by_name_in_collection(item_name, all_items)
+    item = cart[index][:item]
+    sought_item = find_item_by_name_in_collection(item, all_items)
     if sought_item
       sought_item[:count] += 1
     else
       cart[index][:count] = 1
       all_items << cart[index]
     end
-
     index += 1
   end
 all_items
