@@ -47,7 +47,7 @@ def apply_coupon_to_cart(item, coupon, cart)
   item[:count] -= coupon[:num]
   updated_item = coupon_hash(coupon)
   updated_item[:clearance] = item[:clearance]
-  cart << item_with_coupon
+  cart << updated_item
 end
 def apply_coupons(cart, coupons)
   # Consult README for inputs and outputs
