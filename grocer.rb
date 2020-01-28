@@ -61,7 +61,7 @@ def apply_coupons(cart, coupons)
     in_basket = !!discount_item
     can_apply = in_basket && discount_item[:count] >= coupon[:num]
 
-    if discount_item and can_apply
+    if discount_item && can_apply
       apply_coupon_to_cart(discount_item, coupon, cart)
     end
     index += 1
