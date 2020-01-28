@@ -36,10 +36,10 @@ all_items
 end
 
 def coupon_hash(coupon)
-  unit_price = (coupon[:cost] * 1.0 / coupon[:num]).round(2)
+  price = (coupon[:cost] * 1.0 / coupon[:num]).round(2)
   {
     :item => "#{coupon[:item]} W/COUPON",
-    :price => unit_price,
+    :price => price,
     :count => coupon[:num]
   }
 end
