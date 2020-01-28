@@ -2,6 +2,16 @@ def find_item_by_name_in_collection(name, collection)
   # Implement me first!
   #
   # Consult README for inputs and outputs
+  index = 0
+  isFound = nil
+  while index < collection.length do
+    if collection[index][:item] == name
+      isFound = collection[index]
+    else
+      index += 1
+    end
+  end
+  isFound
 end
 
 def consolidate_cart(cart)
