@@ -77,7 +77,7 @@ def apply_coupons(cart, coupons)
    if in_basket && can_apply
      apply_coupon_to_cart(discount_itemcoupon, coupon, cart)
    end
-   i += 1
+   index += 1
  end
 
   cart
