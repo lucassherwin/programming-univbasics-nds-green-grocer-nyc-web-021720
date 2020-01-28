@@ -35,10 +35,15 @@ def consolidate_cart(cart)
 all_items
 end
 
+def make_coupon_hash(coupon)
+  unit_price = (c[:cost] * 1.0 / c[:num]).round(2)
 def apply_coupons(cart, coupons)
   # Consult README for inputs and outputs
   #
   # REMEMBER: This method **should** update cart
+  discount_arr = []
+  
+  
 end
 
 def apply_clearance(cart)
