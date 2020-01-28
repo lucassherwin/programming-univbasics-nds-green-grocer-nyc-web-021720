@@ -49,13 +49,21 @@ def apply_coupon_to_cart(item, coupon, cart)
   updated_item[:clearance] = item[:clearance]
   cart << updated_item
 end
+
 def apply_coupons(cart, coupons)
   # Consult README for inputs and outputs
   #
   # REMEMBER: This method **should** update cart
-  discount_arr = []
-
-
+  index = 0
+  while i < coupons.length do
+    coupon = coupon[i]
+    discount_item =  find_item_by_name_in_collection(coupon[:item], cart)
+    in_basket = !!discount_item
+    if discount_item && item_with_coupon[:count] >= coupon[:num]
+      apply_coupon_to_cart(discount_item, coupon, cart)
+    end
+    index += 1
+  end
 end
 
 def apply_clearance(cart)
