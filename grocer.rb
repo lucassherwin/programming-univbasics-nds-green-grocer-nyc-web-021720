@@ -100,6 +100,6 @@ def checkout(cart, coupons)
     apply_coupons(new_cart, coupons)
     apply_clearance(new_cart)
     while index < new_cart.length do
-      
+
     end
 end
