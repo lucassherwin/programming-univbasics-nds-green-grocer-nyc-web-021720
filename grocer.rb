@@ -59,10 +59,10 @@ def apply_coupons(cart, coupons)
   while index < coupons.count do
    coupon = coupons[index]
    discount_item = find_item_by_name_in_collection(coupon[:item], cart)
-   in_basket = !!discount_item
-   can_apply = in_basket && discount_item[:count] >= coupon[:num]
+   #in_basket = !!discount_item
+   #can_apply = in_basket && discount_item[:count] >= coupon[:num]
 
-   if in_basket && in_basket && discount_item[:count] >= coupon[:num]
+   if discount_item[:count] >= coupon[:num]
      apply_coupon_to_cart(discount_item, coupon, cart)
    end
    index += 1
