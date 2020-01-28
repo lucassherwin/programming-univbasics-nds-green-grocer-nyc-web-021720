@@ -75,7 +75,7 @@ def apply_clearance(cart)
   while index < cart.length do
     item = cart[index]
     if item[:clearance]
-      price = (1-0.2)*item[:price].round(2)
+      price = (1 - 0.2) * item[:price].round(2)
       item[:price] = price
     end
     index += 1
