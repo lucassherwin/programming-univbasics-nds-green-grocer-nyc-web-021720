@@ -7,9 +7,8 @@ def find_item_by_name_in_collection(name, collection)
   while index < collection.length do
     if collection[index][:item] == name
       isFound = collection[index]
-    else
-      index += 1
     end
+    index += 1
   end
   isFound
 end
